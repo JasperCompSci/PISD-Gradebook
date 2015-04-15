@@ -1,0 +1,23 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<form id="gradeBookLoginForm" method="GET" action="https://parentviewer.pisd.edu/EP/PIV_Passthrough.aspx" name="enter" target="_blank">
+        <input type="hidden" name="action" value="trans" ID="Hidden1" />
+        <input type="hidden" name="uT" value="S" />
+        <p>Enter UID:</p>
+        <input type="text" name="uID" value="" />
+    </form>
+
+<script type="text/javascript">
+	function goToGradebook(){
+		var $gradebook = jQuery('#gradeBookLoginForm');
+		if($gradebook.length > 0)
+		{
+			$gradebook.submit();
+		}
+		else
+		{
+			alert('You\'re not able to go to Gradebook.');
+		}
+	}
+</script>
+
+<a href="javascript:goToGradebook()">Go</a>
